@@ -24,4 +24,4 @@ for i in range(len(list_two)):
     while list_two[i] in list_one:
         list_one.remove(list_two[i])
 
-print(f"Resulted unique elements: {list_one}")
+print(f"Resulted unique elements of list_one: {list_one}")
