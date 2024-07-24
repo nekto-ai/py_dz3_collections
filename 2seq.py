@@ -1,8 +1,16 @@
 # MODULE 2
 
 def get_sequence():
-    sequence = input("Enter a sequence of whole numbers separated by comma: ")
-    return [int(num) for num in sequence.split(',')]
+    sequence = input("Enter a sequence of whole numbers separated by comma or semicolon or slash: ")
+    if sequence.find(",") > 0:
+        separator = ","
+    elif sequence.find(";") > 0:
+        separator = ";"
+    elif sequence.find("/") > 0:
+        separator = "/"
+    else:
+        print("Invalid input. Please enter a sequence of whole numbers separated by comma or semicolon or slash.")
+    return [int(num) for num in sequence.split(separator)]
 
 our_list = get_sequence()
 print(f"Entered list: {our_list}")
